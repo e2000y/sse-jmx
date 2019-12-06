@@ -19,9 +19,9 @@ developers := List(
       )
     )
 
-crossScalaVersions := Seq("2.11.8", "2.12.6")
+crossScalaVersions := Seq("2.11.8", "2.12.6", "2.13.1")
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.13.1"
 
 scalacOptions ++= Seq(
     "-deprecation",
@@ -29,11 +29,9 @@ scalacOptions ++= Seq(
     "-feature",
     "-language:implicitConversions",
     "-unchecked",
-    "-Xlint",
-    "-Yno-adapted-args",
-    "-Ywarn-dead-code",
-    "-Ywarn-infer-any",
-    "-Xfuture"
+    "-Wdead-code",
+    "-Xlint:adapted-args",
+    "-Xlint:infer-any"
   )
 
 startYear := Some(2009)
